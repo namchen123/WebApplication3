@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Ecommerce</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Samsung, LG, SonyEricsson, Motorola web design" />
+	<!--//tags -->
+	<link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	<!-- header nav -->
+	<partial name="HeaderProduct"/>
+	<!-- //header nav -->
+	<!-- main -->
+	<main id="main" class="ads-grid">
+		<div class="container">
+			<!-- main left -->
+			<partial name="MainLeft"/>
+			<!-- //main left -->
+			<!-- main right -->
+			@RenderBody()
+			<!-- //main right -->
+		</div>
+	</main>
+	<!-- //main -->
+	<!-- footer -->
+	<partial name="Footer"/>
+	<!-- //footer -->
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="~/js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+	<!-- for bootstrap working -->
+	<script src="~/js/bootstrap.js"></script>
+	@RenderSection("Scripts", required: false)
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+</body>
+
+</html>

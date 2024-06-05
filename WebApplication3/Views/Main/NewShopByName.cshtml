@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Product>
+<div id="mainright" class="agileinfo-ads-display col-md-9">
+	<div class="wrapper">
+		@foreach (var p in Model)
+		{
+			<div class="col-xs-4 product-men">
+				<div class="men-pro-item">
+					<div class="men-thumb-item">
+						<img src="~/images/@p.Image" alt="">
+					</div>
+					<div class="item-info-product ">
+						<h4>
+							<a href="single.html">@p.Name</a>
+						</h4>
+						<div class="info-product-price">
+							<span class="item_price">$@p.UnitPrice</span>
+						</div>
+						<div class="snipcart-details">
+							<a href="" class="button">Edit</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>

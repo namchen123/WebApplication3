@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+<partial name="MainProduct">
+@section Scripts{
+	<script>
+		$('input[type="button"]').click(function (e) {
+			var input = $("input#Search").val();
+			$.ajax({
+				url: "MainBySearch",
+				data: { name: input },
+				success: function (respone) {
+					$("div#mainright").html(respone);
+				}
+			});
+		});
+	</script>
+	<script>
+		$("select").click(function (e) {
+			var value = $(this).val();
+			$.ajax({
+				url: "MainById",
+				data: { id: value },
+				success: function (respone) {
+					$("div#mainright").html(respone);
+				}
+			});
+		});
+	</script>
+}
+
